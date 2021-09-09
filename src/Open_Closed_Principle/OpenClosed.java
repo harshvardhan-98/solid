@@ -33,7 +33,7 @@ class ArrayUtil { // this is closed for modification but open for extension.
 public class OpenClosed {
     public static void main(String[] args) {
         int arr[] = {1,5,4,3,2};
-        ArrayUtil.sort(arr, new DesComparator());
+        ArrayUtil.sort(arr, new AscComparator());
         System.out.println("Values in the array are: ");
         for(int i: arr){
             System.out.println(i);

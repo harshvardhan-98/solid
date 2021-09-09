@@ -1,11 +1,13 @@
-package Single_Responsibility_Principle;
+package Single_Responsibility;
 import java.util.*;
 
-//A class should have one and only one reason to change.
+public class Calculator {
 
-public class Main {
     public static void main(String[] args) {
-        Calculator object = new Calculator();
+        Add A = new Add();
+        Subtract s=new Subtract();
+        Multiplication m=new Multiplication();
+        Division d = new Division();
         char option;
         int a, b;
         Scanner scannerObject = new Scanner(System.in);
@@ -32,16 +34,16 @@ public class Main {
 
             switch (option) {
                 case '+':
-                    System.out.println("The result of Addition is = " + object.add(a,b) + "\n\n");
+                    System.out.println("The result of Addition is: " + A.sum(a,b) + "\n\n");
                     break;
                 case '-':
-                    System.out.println("The result of Subtraction is = " + object.subtract(a,b) + "\n\n");
+                    System.out.println("The result of Subtraction is: " + s.minus(a,b) + "\n\n");
                     break;
                 case '*':
-                    System.out.println("The result of Multiplication is = " + object.multiply(a,b) + "\n\n");
+                    System.out.println("The result of Multiplication is: " + m.mul(a,b) + "\n\n");
                     break;
                 case '/':
-                    System.out.println("The result of Division is = " + object.divide((double)a, (double)b)+"\n\n");
+                    System.out.println("The result of Division is: " + d.div((double)a, (double)b)+"\n\n");
                     break;
                 default:
                     System.out.println("Incorrect Choice! Re-enter again\n\n");
